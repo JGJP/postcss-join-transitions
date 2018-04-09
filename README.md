@@ -3,8 +3,8 @@
 [PostCSS] plugin that joins conflicting transition rules into a single rule.
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/jgjp/postcss-join-transitions.svg
-[ci]:      https://travis-ci.org/jgjp/postcss-join-transitions
+[ci-img]:  https://travis-ci.org/JGJP/postcss-join-transitions.svg
+[ci]:      https://travis-ci.org/JGJP/postcss-join-transitions
 
 Input:
 

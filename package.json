@@ -1,6 +1,6 @@
 {
-  "name": "postcss-merge-transitions",
-  "version": "0.0.0",
+  "name": "postcss-join-transitions",
+  "version": "1.0.0",
   "description": "PostCSS plugin that merges multiple transition rules on a selector into a single transition rule",
   "keywords": [
     "postcss",
