@@ -28,6 +28,10 @@
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5",
+    "rules": {
+      "max-len": 0,
+      "no-use-before-define": 0
+    },
     "env": {
       "jest": true
     }
