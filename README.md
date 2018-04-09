@@ -1,6 +1,6 @@
 # PostCSS Merge Transitions [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin that joins conflicting transition rules into a single rule.
+[PostCSS] plugin that joins conflicting transition declarations.
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/JGJP/postcss-join-transitions.svg
