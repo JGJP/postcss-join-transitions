@@ -1,6 +1,6 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-merge-transitions', function () {
+module.exports = postcss.plugin('postcss-join-transitions', function () {
 
     // Work with options here
 
