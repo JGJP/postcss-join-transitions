@@ -12,6 +12,8 @@ Input:
 .foo {
   transition: opacity .3s ease;
   transition: transform .3s ease;
+  -webkit-transition: opacity .3s ease;
+  -webkit-transition: transform .3s ease;
 }
 ```
 
@@ -20,6 +22,7 @@ Output:
 ```css
 .foo {
   transition: opacity .3s ease, transform .3s ease;
+  -webkit-transition: opacity .3s ease, transform .3s ease;
 }
 ```
 
