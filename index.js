@@ -37,6 +37,8 @@ module.exports = postcss.plugin('postcss-join-transitions', function () {
         // iterate over declarations in rule
 
         var transitions = [];
+        var webkitTransitions = [];
+        var oTransitions = [];
 
         var ii = 0;
         var ll = rule.nodes.length;
@@ -48,6 +50,22 @@ module.exports = postcss.plugin('postcss-join-transitions', function () {
                 // if transition declaration is found, store in array and remove from rule
 
                 transitions.push(rule.nodes[ii].value);
+                rule.nodes[ii].remove();
+
+                ll--;
+
+            } else
+            if ( rule.nodes[ii].prop === '-webkit-transition' ) {
+
+                webkitTransitions.push(rule.nodes[ii].value);
+                rule.nodes[ii].remove();
+
+                ll--;
+
+            } else
+            if ( rule.nodes[ii].prop === '-o-transition' ) {
+
+                oTransitions.push(rule.nodes[ii].value);
                 rule.nodes[ii].remove();
 
                 ll--;
@@ -70,6 +88,28 @@ module.exports = postcss.plugin('postcss-join-transitions', function () {
             });
 
             transitions = [];
+
+        }
+
+        if ( webkitTransitions.length > 0 ) {
+
+            rule.append({
+                prop: '-webkit-transition',
+                value: webkitTransitions.join(', ')
+            });
+
+            webkitTransitions = [];
+
+        }
+
+        if ( oTransitions.length > 0 ) {
+
+            rule.append({
+                prop: '-o-transition',
+                value: oTransitions.join(', ')
+            });
+
+            oTransitions = [];
 
         }
 
